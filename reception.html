@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الرئيسية</title>
+  <style>
+    body {
+      background-image:url(palastine.jpg) ;
+    }
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 40px;
+    color: #333;
+  }
+  
+  button {
+    padding: 40px 40px;
+    font-size: 18px;
+    background-color: #4cb529;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #16340c;
+  }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <h1>الصفحة الرئيسية</h1>
+    <button id="redirectionButton">المواد الاساسية</button>
+  </div>
+  
+  <script>
+    function redirection() {
+      window.location.href = 'quet.html';
+    }
+    document.getElementById('redirectionButton').addEventListener('click', redirection);
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المحتوى</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f9efae;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .image-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      overflow: hidden;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px 8px 0 0;
+      transition: transform 0.3s ease;
+    }
+    .image-container:hover img {
+      transform: scale(1.05);
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .buttonn, .location-button,.location-button1,.location-button2 {
+      background-color: #4cb529;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .buttonn:hover, .location-button:hover {
+      background-color: #16e5a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="photo1.jpg" alt="صورة مميزة">
+    </div>
+    <div class="button-container">
+      <button class="buttonn request-button">طلب</button>
+      <a href="#" class="location-button">موقع</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="image-container">
+      <img src="photo2.jpg" alt="مساعدات">
+    </div>
+    <div class="button-container">
+      <button class="buttonn request-button">طلب</button>
+      <a href="#" class="location-button1">موقع</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="image-container">
+      <img src="photo3.jpg" alt="غطاء">
+    </div>
+    <div class="button-container">
+      <button class="buttonn request-button">طلب</button>
+      <a href="#" class="location-button2">موقع</a>
+    </div>
+  </div>
+  
+  <script>
+    document.querySelectorAll('.request-button').forEach(button => {
+      button.addEventListener('click', function() {
+        alert('تمت عملية الطلب بنجاح!');
+      });
+    });
+    
+    document.querySelector('.location-button').addEventListener('click', function() {
+      alert('حي الزيتون');
+    });
+
+    document.querySelector('.location-button1').addEventListener('click', function() {
+      alert('حي الشجاعية');
+    });
+
+    document.querySelector('.location-button2').addEventListener('click', function() {
+      alert('حي الدرج');
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+

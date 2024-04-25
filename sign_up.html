@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - gaza</title>
+  <style>
+    body {
+        background-image:url(palastine.jpg) ;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 800;
+    font-size: 50px;
+    font-style:ormal;
+     margin-bottom: 70px;
+    color: #000000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4cb529;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b5babeab;
+}
+
+a {
+    color: ##4cb529;
+    text-decoration: none;
+}
+
+
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>gaza</h1>
+            <form id="loginForm" method="post">
+                <input type="text" name="fullname" placeholder="اسم كامل" required>
+                <input type="text" name="username" placeholder="اسم مستخدم" required>
+                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                <input type="password" name="password" placeholder="الرقم السري" required>
+                <input type="radio" name="genre" value="donor" required>
+                <label>متبرع</label>
+                <input type="radio" name="genre" value="needy" required>
+                <label>محتاج</label>
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+            <p>هل لديك حساب بالفعل ؟ <a href="authe.html">سجل الدخول</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            window.location.href = "reception.html";
+        });
+    </script>
+</body>
+</html>
+

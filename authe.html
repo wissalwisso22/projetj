@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gaza Authentication</title>
+   <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    background-image:url(palastine.jpg) ;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 60px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 800;
+    font-size: 50px;
+    font-style:ormal;
+     margin-bottom: 70px;
+    color: #000000;
+    }
+
+input[type="text"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4cb529;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cececeab;
+}
+
+a {
+    color: #4cb529;
+    text-decoration: none;
+}
+alert {
+    color: red;
+    font-weight: bold;
+}
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>gaza</h1>
+            <form id="loginForm" method="post">
+                <input id="username" type="text" name="username" placeholder="اسم المستخدم أو البريد الإلكتروني" required>
+                <input id="password" type="password" name="password" placeholder="الرقم السري" required>
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+            <p>ليس لديك حساب ؟ <a href="sign_up.html">تسجيل</a></p>
+        </div>
+    </div>
+    <script > 
+    var password = "motdepasse"; 
+        var mhl = 3; 
+        
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            
+            var enteredPassword = document.getElementById("password").value;
+            
+            if (enteredPassword === password) {
+                window.location.href = "reception.html";
+            } else {
+               mhl--;
+                if (mhl > 0) {
+                    alert("كلمة سر غير صحيحة. لديك " + mhl + " محاولة");
+                } else {
+                   
+                    window.close( alert("لا يمكنك المحاولة مرة أخرى.")); 
+                    
+                    document.getElementById("password").disabled = true;
+                }
+            }
+        });</script>
+</body>
+</html>
+
+
